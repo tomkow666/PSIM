@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :positions
+  devise_for :employees
+  devise_for :clients
   resources :shipments
   resources :payments
   resources :statuses
