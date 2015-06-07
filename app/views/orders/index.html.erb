@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Client</th>
-      <th>Staff</th>
+      <th>Employee</th>
       <th>Status</th>
       <th>Shipment</th>
       <th>Payment</th>
@@ -21,7 +21,7 @@
     <% @orders.each do |order| %>
       <tr>
         <td><%= order.client_id %></td>
-        <td><%= order.staff_id %></td>
+        <td><%= order.employee_id %></td>
         <td><%= order.status_id %></td>
         <td><%= order.shipment_id %></td>
         <td><%= order.payment_id %></td>

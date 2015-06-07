@@ -7,4 +7,7 @@ class Order < ActiveRecord::Base
 	has_many :units
 	belongs_to :client
 	belongs_to :employee
+	def cost
+		333
+	end
 end
