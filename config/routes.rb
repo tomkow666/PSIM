@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :shipment_methods
+  resources :payment_methods
+  root 'products#index'
+
   resources :positions
   devise_for :employees
   devise_for :clients
@@ -13,6 +17,7 @@ Rails.application.routes.draw do
   resources :thoughts
   resources :rates
   resources :images
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

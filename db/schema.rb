@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607111053) do
+ActiveRecord::Schema.define(version: 20150607184923) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20150607111053) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -48,6 +51,10 @@ ActiveRecord::Schema.define(version: 20150607111053) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.datetime "birthdate"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -78,12 +85,18 @@ ActiveRecord::Schema.define(version: 20150607111053) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "payment_methods", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "payments", force: :cascade do |t|
-    t.string   "method"
+    t.integer  "payment_method_id"
     t.boolean  "is_complete"
     t.float    "amount"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -94,19 +107,26 @@ ActiveRecord::Schema.define(version: 20150607111053) do
 
   create_table "products", force: :cascade do |t|
     t.integer  "category_id"
-    t.integer  "producent_id"
+    t.integer  "vendor_id"
     t.string   "name"
     t.float    "netto_price"
     t.float    "vat"
     t.text     "description"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "rates", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "client_id"
     t.integer  "rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shipment_methods", force: :cascade do |t|
+    t.string   "name"
+    t.float    "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

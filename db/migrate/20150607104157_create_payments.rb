@@ -1,7 +1,7 @@
 class CreatePayments < ActiveRecord::Migration
   def change
     create_table :payments do |t|
-      t.string :method
+      t.integer :payment_method_id
       t.boolean :is_complete
       t.float :amount
 

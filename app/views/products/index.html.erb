@@ -6,11 +6,11 @@
   <thead>
     <tr>
       <th>Category</th>
-      <th>Producent</th>
+      <th>Vendor</th>
       <th>Name</th>
-      <th>Amount</th>
       <th>Netto price</th>
       <th>Vat</th>
+      <th>price</th>
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
@@ -20,11 +20,11 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.category_id %></td>
-        <td><%= product.producent_id %></td>
+        <td><%= product.vendor_id %></td>
         <td><%= product.name %></td>
-        <td><%= product.amount %></td>
         <td><%= product.netto_price %></td>
         <td><%= product.vat %></td>
+        <td><%= product.price %></td>
         <td><%= product.description %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>

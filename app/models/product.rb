@@ -5,4 +5,12 @@ class Product < ActiveRecord::Base
 	has_many :thoughts
 	has_many :rates
 	has_many :images
+
+	def price
+		netto_price + netto_price * vat
+	end
+
+	def amount
+		units.count
+	end
 end
