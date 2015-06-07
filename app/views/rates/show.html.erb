@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @rate.product_id %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @rate.client_id %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @rate.rate %>
+</p>
+
+<%= link_to 'Edit', edit_rate_path(@rate) %> |
+<%= link_to 'Back', rates_path %>

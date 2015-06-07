@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @thought.product_id %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @thought.client_id %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @thought.body %>
+</p>
+
+<%= link_to 'Edit', edit_thought_path(@thought) %> |
+<%= link_to 'Back', thoughts_path %>

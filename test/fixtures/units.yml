@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  netto_price: 1.5
+  vat: 1.5
+  is_sold: false
+  sold_at: 2015-06-07 12:26:47
+
+two:
+  product_id: 1
+  netto_price: 1.5
+  vat: 1.5
+  is_sold: false
+  sold_at: 2015-06-07 12:26:47

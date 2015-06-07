@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @unit.product_id %>
+</p>
+
+<p>
+  <strong>Netto price:</strong>
+  <%= @unit.netto_price %>
+</p>
+
+<p>
+  <strong>Vat:</strong>
+  <%= @unit.vat %>
+</p>
+
+<p>
+  <strong>Is sold:</strong>
+  <%= @unit.is_sold %>
+</p>
+
+<p>
+  <strong>Sold at:</strong>
+  <%= @unit.sold_at %>
+</p>
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

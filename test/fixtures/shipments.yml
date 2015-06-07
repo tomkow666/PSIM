@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  method: MyString
+  price: 1.5
+  is_complete: false
+
+two:
+  method: MyString
+  price: 1.5
+  is_complete: false
