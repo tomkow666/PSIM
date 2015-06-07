@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  apipie
   resources :shipment_methods
   resources :payment_methods
   root 'products#index'
